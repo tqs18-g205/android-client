@@ -68,7 +68,7 @@ public class LoginActivityTest {
         onView(withId(R.id.btn_login))
                 .perform(click());
 
-        assertEquals("Invalid Login", mActivityRule.getActivity().isLogged(), true);
+        assertEquals("Invalid Login", mActivityRule.getActivity().isLogged(), false);
 
     }
 

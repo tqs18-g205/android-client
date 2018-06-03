@@ -42,6 +42,4 @@ before_script:
   
 script: 
   - chmod +x gradlew
-  - ./gradlew test
-  - ./gradlew connectedAndroidTest
   - ./gradlew clean connectedAndroidTest test createDebugCoverageReport jacocoTestReport sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=bdomingues-github

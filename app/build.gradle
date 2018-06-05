@@ -17,7 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
-        debug{
+        debug {
             testCoverageEnabled true
         }
     }
@@ -39,6 +39,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+
+
 }
 
 jacocoAndroidUnitTestReport {

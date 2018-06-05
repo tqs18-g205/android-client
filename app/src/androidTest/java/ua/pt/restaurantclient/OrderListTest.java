@@ -34,7 +34,7 @@ import static org.hamcrest.Matchers.is;
 public class OrderListTest {
 
     @Rule
-    public ActivityTestRule<LoginActivity> mActivityTestRule = new ActivityTestRule<>(LoginActivity.class);
+    public ActivityTestRule<OrderList> mActivityTestRule = new ActivityTestRule<>(OrderList.class);
 
     @Test
     public void orderListTest() {

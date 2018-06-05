@@ -33,6 +33,7 @@ public class OrderList extends AppCompatActivity {
     private RecyclerView mList;
     private LinearLayoutManager linearLayoutManager;
     private DividerItemDecoration dividerItemDecoration;
+
     private List<Encomenda> orderList;
     private RecyclerView.Adapter adapter;
 

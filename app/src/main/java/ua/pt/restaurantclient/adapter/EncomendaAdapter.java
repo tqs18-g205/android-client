@@ -15,6 +15,7 @@ import ua.pt.restaurantclient.model.Encomenda;
 public class EncomendaAdapter extends RecyclerView.Adapter<EncomendaAdapter.ViewHolder> {
 
     private Context context;
+
     private List<Encomenda> list;
 
     public EncomendaAdapter(Context context, List<Encomenda> list) {
@@ -43,7 +44,7 @@ public class EncomendaAdapter extends RecyclerView.Adapter<EncomendaAdapter.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView textTitle, tipoEncomenda, estadoEncomenda;
+        final TextView textTitle, tipoEncomenda, estadoEncomenda;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -52,6 +53,9 @@ public class EncomendaAdapter extends RecyclerView.Adapter<EncomendaAdapter.View
             tipoEncomenda = itemView.findViewById(R.id.tipo_encomenda);
             estadoEncomenda = itemView.findViewById(R.id.estado_encomenda);
         }
+    }
+    public void setList(List<Encomenda> list) {
+        this.list = list;
     }
 
 }

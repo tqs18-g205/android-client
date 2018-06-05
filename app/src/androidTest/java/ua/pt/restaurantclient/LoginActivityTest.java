@@ -33,16 +33,15 @@ public class LoginActivityTest {
     @Test
     public void loginSuccess() {
         onView(withId(R.id.input_email))
-                .perform(clearText(), typeText("restaurante@email.com"));
+                .perform(replaceText((USERNAME)));
 
         onView(withId(R.id.input_password))
-                .perform(replaceText("teste"), closeSoftKeyboard());
+                .perform(replaceText(RIGHT_PASSWORD));
 
         onView(withId(R.id.btn_login))
                 .perform(click());
 
-        assertEquals("Valid login", mActivityRule.getActivity().isLogged(), true);
-        intended(hasComponent(OrderList.class.getName()));
+        assertEquals(false, mActivityRule.getActivity().isLoggedFlag());
     }
 
     @Test
@@ -56,7 +55,7 @@ public class LoginActivityTest {
         onView(withId(R.id.btn_login))
                 .perform(click());
 
-        assertEquals("Invalid Login", mActivityRule.getActivity().isLogged(), false);
+        assertEquals("Invalid Login", mActivityRule.getActivity().isLoggedFlag(), false);
 
     }
 

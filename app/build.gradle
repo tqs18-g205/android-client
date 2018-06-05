@@ -38,6 +38,7 @@ dependencies {
     androidTestCompile 'com.android.support.test:rules:0.5'
     androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
 }
 
 jacocoAndroidUnitTestReport {

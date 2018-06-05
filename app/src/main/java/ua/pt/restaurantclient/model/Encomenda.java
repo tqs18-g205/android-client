@@ -1,30 +1,31 @@
 package ua.pt.restaurantclient.model;
 
-public class Encomenda {
-    private String id;
+public class Encomenda
+{
+    private String total;
 
-    private Estado estado;
+    private Cliente cliente;
 
     private TipoEntrega tipoEntrega;
 
-    public String getId ()
+    public String getTotal ()
     {
-        return id;
+        return total;
     }
 
-    public void setId (String id)
+    public void setTotal (String total)
     {
-        this.id = id;
+        this.total = total;
     }
 
-    public Estado getEstado ()
+    public Cliente getCliente ()
     {
-        return estado;
+        return cliente;
     }
 
-    public void setEstado (Estado estado)
+    public void setCliente (Cliente cliente)
     {
-        this.estado = estado;
+        this.cliente = cliente;
     }
 
     public TipoEntrega getTipoEntrega ()
@@ -40,6 +41,6 @@ public class Encomenda {
     @Override
     public String toString()
     {
-        return "ClassPojo [id = "+id+", estado = "+estado+", tipoEntrega = "+tipoEntrega+"]";
+        return "ClassPojo [total = "+total+", cliente = "+cliente+", tipoEntrega = "+tipoEntrega+"]";
     }
 }

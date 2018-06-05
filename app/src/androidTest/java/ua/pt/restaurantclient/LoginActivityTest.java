@@ -52,6 +52,7 @@ public class LoginActivityTest {
         onView(withId(R.id.input_password))
                 .perform(replaceText("tes2te"), closeSoftKeyboard());
 
+
         onView(withId(R.id.btn_login))
                 .perform(click());
 

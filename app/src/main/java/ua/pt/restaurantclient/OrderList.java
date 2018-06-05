@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import ua.pt.restaurantclient.adapter.EncomendaAdapter;
-import ua.pt.restaurantclient.model.Encomenda;
+import ua.pt.restaurantclient.model.EncomendaRestaurante;
 
 public class OrderList extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class OrderList extends AppCompatActivity {
     private LinearLayoutManager linearLayoutManager;
     private DividerItemDecoration dividerItemDecoration;
 
-    private List<Encomenda> orderList;
+    private List<EncomendaRestaurante> orderList;
     private RecyclerView.Adapter adapter;
 
     private ProgressDialog progressDialog;
@@ -64,10 +64,6 @@ public class OrderList extends AppCompatActivity {
     }
 
     private void fetchOrders() {
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Loading...");
-        progressDialog.show();
-
 
         StringRequest request = new StringRequest(Request.Method.GET, ENDPOINT, onOrdersLoaded, onOrdersError);
         requestQueue.add(request);
@@ -76,17 +72,15 @@ public class OrderList extends AppCompatActivity {
     private final Response.Listener<String> onOrdersLoaded = new Response.Listener<String>() {
         @Override
         public void onResponse(String response) {
-            List<Encomenda> orders = Arrays.asList(gson.fromJson(response, Encomenda[].class));
+            List<EncomendaRestaurante> orders = Arrays.asList(gson.fromJson(response, EncomendaRestaurante[].class));
             orderList.addAll(orders);
             adapter.notifyDataSetChanged();
-            progressDialog.dismiss();
         }
     };
         private final Response.ErrorListener onOrdersError = new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("Volley", error.toString());
-                progressDialog.dismiss();
             }
         };
 }

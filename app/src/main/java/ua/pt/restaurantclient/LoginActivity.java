@@ -65,6 +65,8 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 }, 3000);
+
+        progressDialog.dismiss();
     }
 
 

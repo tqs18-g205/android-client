@@ -21,10 +21,7 @@ android:
   - extra-android-m2repository
 script:
 - chmod +x gradlew
-- ./gradlew assembleRelease
-before_install:
-- openssl aes-256-cbc -K $encrypted_88d71e1caada_key -iv $encrypted_88d71e1caada_iv
-  -in build.jks.enc -out build.jks -d
+- "./gradlew assembleRelease"
 deploy:
   provider: releases
   skip_cleanup: true
@@ -33,4 +30,6 @@ deploy:
   file: "/home/travis/build/tqs18-g205/android-client/build/outputs/apk/release/*"
   on:
     repo: tqs18-g205/android-client
-#branch: deployment
+before_install:
+- openssl aes-256-cbc -K $encrypted_88d71e1caada_key -iv $encrypted_88d71e1caada_iv
+  -in build.jks.enc -out build.jks -d

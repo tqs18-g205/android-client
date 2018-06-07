@@ -105,8 +105,41 @@
             android:text=""
             android:textSize="20sp" />
 
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="bottom">
 
+            <Button
+                android:id="@+id/preparacao"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:text="Em preparação"
+                android:backgroundTint="#ad1f34"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/preparado"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="0.5"
+                android:text="Preparado"
+                android:backgroundTint="#ad1f34"
+                android:textColor="#FFFFFF"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
 
 </LinearLayout >

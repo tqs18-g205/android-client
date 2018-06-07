@@ -27,6 +27,6 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: o2ucxga479+ra/laCKtAg3yaC5Gh+RYsZ68y/MSfKjsGS+enBnMiMpfUv/HuyHpWmZejNg3Fh1QBO0Q3EqZ1Q2hqO+w2heEf9V50TyyvZfg6OaEDUKgXoZufCFPRFg4uL4G8w+JrTpLJd7qqedmDYQxhJvfkU4rrCF46j5pdcDmLQdW39H3BwouGFdX7woD33cARbOrBbw/Ze+PFCoD8c/0V+cpaDRJrt28nuUIYe4GcXjxye5WoHqiYIXG3Oe2Si+gFl5sZyqoRMiYttk2N3cUN1ZzHdzOkrFPEVE0UHttMRTo2uR08nsGeYNhq02/6PMSpjhWSFxNlWa5uaiGShi4TvVlW7d67iOIUE5Hc22tPNtCmVUu/YRfoIyRFf0kbXvTkTrdX18zNpsBQSzjUJb3Tb7tdH24lsV9KCb/ot++U9ISZWTC9W7q8Pj2zKPvtQeDUDGjgP4aUsBZOtbY3tGBZRKEsmNttaK+1tTLU9CBZzXdPWddoPWe8jwACQ9hXVVGpEd3C1X6L7Zkr+dp0if4hdRsmBZ4Qgy44zAtZosGFEbcaU/deZ8fe1oEw4nquFiG6KX44oJdSsMoztDxwFrQQDloQEVEaOtCpvJn1FxUo9xss+INbyn5+LXWzT4hw8WRSZH7CednF3pMlppFalPVnqAWSmX+2xl+tNGT7wdI=
-  file: "/home/travis/build/tqs18-g205/android-client/build/outputs/apk/release/*"
+  file: "/home/travis/build/tqs18-g205/android-client/app/build/outputs/apk/release/app-release.apk"
   on:
     repo: tqs18-g205/android-client

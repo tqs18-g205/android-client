@@ -16,16 +16,11 @@ android:
   - tools
   - build-tools-$ANDROID_BUILD_TOOLS_VERSION
   - android-$ANDROID_API_LEVEL
-  - android-$EMULATOR_API_LEVEL
   - extra-android-support
   - extra-google-m2repository
   - extra-android-m2repository
-  - sys-img-armeabi-v7a-google_apis-$ANDROID_API_LEVEL
-  - sys-img-armeabi-v7a-google_apis-$EMULATOR_API_LEVEL
 script:
 - chmod +x gradlew
-- "./gradlew clean sonarqube -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=bdomingues-github
-  --stacktrace"
 before_install:
 - openssl aes-256-cbc -K $encrypted_88d71e1caada_key -iv $encrypted_88d71e1caada_iv
-  -in ks.jks.enc -out ks.jks -d
+  -in build.jks.enc -out build.jks -d
